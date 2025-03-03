@@ -1,5 +1,5 @@
-import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext} from "./ThemeContext";
 import {ReactNode, useMemo, useState} from "react";
+import { ThemeContext,Theme,LOCAL_STORAGE_THEME_KEY } from "../lib/ThemeContext";
 
 
 
@@ -9,7 +9,7 @@ interface ThemeProviderProps {
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
 
-export const ThemeProvider = ({children}:ThemeProviderProps) => {
+const ThemeProvider = ({children}:ThemeProviderProps) => {
     const [theme, setTheme]  = useState(defaultTheme);
 
     const toggleTheme = () => {
@@ -26,4 +26,7 @@ export const ThemeProvider = ({children}:ThemeProviderProps) => {
             {children}
         </ThemeContext.Provider>
     )
-}
+};
+
+export default ThemeProvider;
+
