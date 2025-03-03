@@ -1,4 +1,3 @@
-import Counter from "./components/Counter";
 import './styles/index.scss';
 import {Link, Route, Routes} from "react-router-dom";
 import About from "./pages/about/About";
@@ -19,7 +18,6 @@ const{theme, toggleTheme} = useTheme();
                <Route path={'/'}/>
                <Route path={'/about'} element={<About/>}/>
            </Routes>
-           <Counter/>
        </div>
     )
 }
