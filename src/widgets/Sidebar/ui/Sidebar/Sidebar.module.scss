@@ -1,0 +1,13 @@
+.Sidebar {
+  height: calc(100vh - var(--navbar-heigth));
+  width: var(--sidebar-width);
+  background: var(--reverse-bg-color);
+  box-shadow: var(--ifm-global-shadow-lw);
+  border-right: 1px solid var(--reverse-bg-color);
+  position: relative;
+  transition: width 0.3s;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
